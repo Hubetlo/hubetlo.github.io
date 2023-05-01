@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Number Comparison</title>
+    <link rel="icon" type="image/x-icon" href="C:\Users\wps-1\Videos\OIP.jpeg" />
+	<body style="background-color: navajowhite;">
+  </head>
+  <body>
+    <h1>Number Comparison</h1>
+    <form>
+      <label for="num1">Number 1:</label>
+      <input type="number" id="num1" name="num1">
+      <br>
+      <label for="num2">Number 2:</label>
+      <input type="number" id="num2" name="num2">
+      <br>
+      <button type="button" onclick="compareNumbers()">Compare</button>
+      <br>
+      <button><a href="Websites.html">Main Page</a></button>
+      
+    </form>
+    <p id="result"></p>
+    <script>
+      function compareNumbers() {
+        const num1 = document.getElementById('num1').value;
+        const num2 = document.getElementById('num2').value;
+        
+        if (num1 > num2) {
+          document.getElementById('result').textContent = `${num1} is greater than ${num2}`;
+        } else if (num1 < num2) {
+          document.getElementById('result').textContent = `${num2} is greater than ${num1}`;
+        } else {
+          document.getElementById('result').textContent = `${num1} is equal to ${num2}`;
+        }
+      }
+    </script>
+    <button><a href="cc.html">Go On The Next Page</button>
+  </body>
+</html>

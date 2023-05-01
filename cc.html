@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Counting Machine</title>
+    <link rel="icon" type="image/x-icon" href="C:\Users\wps-1\Videos\OIP.jpeg" />
+	<style>
+  div {
+  width: 50px;
+  height: 50px;
+  background: rgb(55, 22, 145);
+  position: relative;
+  animation: mymove 10s infinite;
+  }
+
+  @keyframes mymove {
+  0% {background:red; left: 0px;}
+  25% {background: blue; left: 1650px;}
+  50% {background: purple;left: 1650px;}
+  75% {background:rgb(55, 22, 145);left: 0;}
+
+}
+	  body {
+		background-color: navajowhite;
+	  }
+	</style>
+  </head>
+  <body>
+    <h1 style="font-size: 45px;text-align: center;">Counting Machine</h1>
+    <br>
+    <label for="Num1" style="font-size: 30px;">Number 1:</label>
+    <input type="number" id="num1" name="Num1">
+    <br>
+    <label for="operators"style="font-size: 30px" >Choose The Operators</label>
+    <select name="Operators" id="operators">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="x">x</option>
+      <option value="/">/</option>
+    </select>
+    <br>
+    <label for="Num2" style="font-size: 30px">Number 2:</label>
+    <input type="number" id="num2" name="num2">
+    <br>
+    <button onclick="Counting_Machine()">Counting!</button>
+    <br>
+    <button><a href="Compare.html"> Go To The Previous Page</a></button>
+    <button><a href="Websites.html">Go To The Main Page</a></button>
+    <br>
+    <button onclick="pauseAnimation()">Pause Animation</button>
+    <div></div>
+    
+    <p id="result"></p>
+    <script>
+        function Counting_Machine()
+        {
+            const num1 = parseInt(document.getElementById('num1').value);
+            const num2 = parseInt(document.getElementById('num2').value);
+            const operators = document.getElementById('operators').value;
+            let result;
+            switch (operators)
+            {
+                case "+":
+                 result=num1+num2;
+                 break;
+                case "-":
+                 result=num1-num2;
+                 break;
+                case "x":
+                 result=num1*num2;
+                 break;
+                case "/":
+                 result=num1/num2;
+                 break;             
+            }
+            document.getElementById("result").textContent = result;
+        }
+        
+        function pauseAnimation() {
+          const div = document.querySelector("div");
+          div.style.animationPlayState = div.style.animationPlayState === "paused" ? "running" : "paused";
+        }
+    </script>
+  </body>
+</html>
