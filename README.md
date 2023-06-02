@@ -1,4 +1,2 @@
-<!DOCTYPE html>
-<html>
-    <title>Welcome To My First GitHub Websites!</title>
-</html>
+##First Code Of HTML
+My first code of HTML is website.html!
